@@ -1,3 +1,5 @@
+# validation trigger for terraform plan
+
 variable "aws_region" {
   default = "ap-south-1"
 }
