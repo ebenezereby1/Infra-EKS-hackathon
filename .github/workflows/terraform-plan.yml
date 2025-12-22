@@ -13,10 +13,6 @@ jobs:
   terraform-plan:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: .
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,7 +26,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: ap-south-1
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init
         run: terraform init
