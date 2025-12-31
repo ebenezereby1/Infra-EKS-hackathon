@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: <+artifact.image>
+        image: 2656parthee/user-service:19
         ports:
         - containerPort: 5000
