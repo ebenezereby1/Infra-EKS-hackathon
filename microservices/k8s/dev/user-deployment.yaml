@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: your-dockerhub-username/user-service:latest
+        image: <+artifact.image>
         ports:
         - containerPort: 5000
